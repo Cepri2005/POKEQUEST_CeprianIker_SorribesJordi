@@ -13,7 +13,16 @@
 </head>
 <body class="fondo4">
     <div class="container2">
-        <h1>En que generacion se añadio el tipo hada?
+        <h1>En que generacion se añadio el tipo hada? <br>
+        <?php
+    if(isset($_GET['error']) &&  $_GET['error'] == 1){
+        echo "Error, la pista es: Hay un total de 8 Generacion y el tipo Hada es el mas reciente";
+}
+    if(isset($_GET['error']) &&  $_GET['error'] == 2){
+        header("location: ./pregunta1.php");
+        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
+}
+?>
             <div class="fila1_b"> 
                 <img class="pokeball" src="../img/pokeball.png">
                 <img class="pokeball" src="../img/pokeball.png">
@@ -33,11 +42,3 @@
     </div>    
 </body>
 </html>
-<?php
-    if(isset($_GET['error']) &&  $_GET['error'] == 1){
-        echo "";
-    }
-    if(isset($_GET['error']) &&  $_GET['error'] == 2){
-        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
-    }
-?>

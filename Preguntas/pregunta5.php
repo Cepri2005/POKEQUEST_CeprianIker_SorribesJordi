@@ -13,7 +13,16 @@
 </head>
 <body class="fondo5">
     <div class="container2">
-        <h1>¿Que region es esta?
+        <h1>¿Que region es esta? <br>
+        <?php
+    if(isset($_GET['error']) &&  $_GET['error'] == 1){
+        echo "Error, la pista es: Es una combinacion de si y no";
+}
+    if(isset($_GET['error']) &&  $_GET['error'] == 2){
+        header("location: ./pregunta1.php");
+        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
+}
+?>
             <div class="fila1_b"> 
                 <img class="pokeball" src="../img/pokeball.png">
                 <img class="pokeball" src="../img/pokeball.png">
@@ -34,11 +43,4 @@
     </div>
 </body>
 </html>
-<?php
-    if(isset($_GET['error']) &&  $_GET['error'] == 1){
-        echo "";
-    }
-    if(isset($_GET['error']) &&  $_GET['error'] == 2){
-        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
-    }
-?>
+

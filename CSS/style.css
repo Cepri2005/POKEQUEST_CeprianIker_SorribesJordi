@@ -215,7 +215,6 @@ input[type="submit"]:hover {
     font-size: 26px;
 }
 
-
 /* keyframes */
 @keyframes escribir {
     from {
@@ -227,228 +226,77 @@ input[type="submit"]:hover {
 }
 
 /* media query */
-@media only screen and (max-width:600px) {
+@media only screen and (max-width: 500px) {
+    body {
+        font-size: 1rem;
+    }
 
+    .row {
+        flex-wrap: wrap;
+    }
     .fondo{
+        height: auto;
+    }
+    .fila1{
+        width: 100%;
+        text-align: center;
+    }
+    .colum33{
+        width: 100%;
+        text-align: center;
+    }
+    .colum60{
+        width: 100%;
+    }
+
+    .grande {
+        width: 100%;
+    }
+
+    h1, h2 {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    input[type="text"] {
+        width: 80%;
+    }
+
+    .img1 {
+        width: 50%;
+        margin-top: 20%;
+    }
+
+    .pokemons {
+        margin-left: 5%;
+        margin-right: 5%;
+        display: block;
+    }
+
+    .pokemons img {
+        width: 50%;
+    }
+
+    .texto-pokemon {
+        font-size: 20px;
+    }
+    .imgg{
+        width: 70%;
+    }
+    .pokeball{
+        width: 33%;
+    }
+    input[type="image"] {
+        width: 20%;
+    }
+    h3{
+        font-size: 1.50em;
+    }
+    .texto-pokemon {
+        margin-top: 50%;
+        transform: translate(-50%, 60%);
+        animation: escribir 4.5s steps(60) forwards;
+        font-size: 26px;
         
     }
-    .row{
-       flex-direction: column;
-    }
-    
-}
-body {
-    margin: 0;
-    font-size: 1.2rem;
-    font-family: 'Pokemon Solid', sans-serif;
-}
-
-.row {
-    width: 100%;
-    display: flex;
-}
-
-form {
-    margin-top: 20px;
-
-}
-
-.grande{
-    width: 80%;
-}
-
-/* Tamaños letras */
-p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-}
-
-.h1b{
-    text-align: center;
-    background-color: greenyellow;
-}
-
-.fondoh1{
-    background-image: url(./../img/fondoh1.png);
-    background-size: cover;
-}
-
-h1{
-    text-align: center;
-    background-color: greenyellow;
-    margin-left: 25%;
-    margin-right: 25%;
-}
-
-h2{
-    text-align: center;
-    font-weight: 10%;
-    background-color: greenyellow;
-    margin-left: 40%;
-    margin-right: 40%;
-}
-
-/* Fondos */
-.fondo {
-    background-image: url('./../img/intento2.webp');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-
-.fondo1{
-    background-image: url(./../img/laboratorio.png);
-    background-size: cover;
-    width: 100%;
-}
-
-.fondo2{
-    background-image: url(./../img/fondo2.jpg);
-    background-size: cover;
-
-}
-
-.fondo3{
-    background-image: url(./../img/kanto.jpeg);
-    background-size: cover;
-    width: 100%;
-
-}
-
-.fondo4{
-    background-image: url(./../img/Mapa_Kalos.webp);
-    background-size: cover;
-}
-.fondo5{
-    background-image: url(./../img/Sinnoh_fondo.webp);
-    background-size: cover;
-}
-.fondo6{
-    background-image: url(./../img/fondo6.jpg);
-    background-size: cover;    
-
-}
-.fondo7{
-    background-image: url(./../img/diploma.png);
-    height: 100%;
-    background-size: cover;  
-}
-
-/* Imagenes */
-.img1{
-    width: 30%;
-    margin-top: 60%;
-    padding: 5%;
-}
-
-.img2{
-    width: 50%;
-}
-
-.imgg{
-    width: 12%;
-}
-
-/* Filas */
-.fila1 {
-    width: 30%;
-}
-
-.fila1_b {
-    width: 100%;
-}
-
-/* Pokeballs */
-.pokeball_b{
-    width: 2%;
-}
-
-.pokeball {
-    width: 5%;
-}
-
-.pokeball1{
-    width: 8%;
-}
-
-.pokeball-container {
-    text-align: center;
-}
-
-/* Columnas */
-.colum33 {
-    width: 33%;
-    text-align: center;
-}
-
-.colum50{
-    width: 50%;
-}
-
-.colum60{
-    width: 60%;
-    text-align: center;
-}
-
-/* Inputs */
-input[type="text"] {
-    width: 50%;
-    padding: 10px;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-}
-
-input[type="image"] {
-    width: 7%;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-.img2-b {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-/* Contenedores */
-.container2 {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contenedor-b {
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Pokemons */
-.centro {
-    text-align: center;
-}
-
-.pokemons{
-    display: flex;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.pokemons img{
-    width: 50%;
-}
-
-.texto-pokemon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    white-space: nowrap;
-    animation: escribir 4.5s steps(60) forwards;
-    text-align: center;
-    font-size: 26px;
 }

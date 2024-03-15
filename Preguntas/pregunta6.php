@@ -13,7 +13,16 @@
 </head>
 <body class="fondo6">
     <div class="container2">
-        <h1>¿Cuantos años ha tardado ASH en lograr convertirse en campeon mundial (desde su primera emision en television)?
+        <h1>¿Cuantos años ha tardado ASH en lograr convertirse en campeon mundial (desde su primera emision en television)? <br>
+        <?php
+    if(isset($_GET['error']) &&  $_GET['error'] == 1){
+        echo "Error, la pista es: Supera los 20 años";
+}
+    if(isset($_GET['error']) &&  $_GET['error'] == 2){
+        header("location: ./pregunta1.php");
+        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
+}
+?>
             <div class="fila1_b"> 
                 <img class="pokeball" src="../img/pokeball.png">
                 <img class="pokeball" src="../img/pokeball.png">
@@ -37,11 +46,4 @@
     </div>
 </body>
 </html>
-<?php
-    if(isset($_GET['error']) &&  $_GET['error'] == 1){
-        echo "";
-    }
-    if(isset($_POST['error']) &&  $_POST['error'] == 2){
-        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
-    }
-?>
+

@@ -1,8 +1,8 @@
 <?php
     session_start();
     if(!isset($_SESSION['OK2'])){
-        header("Location: ./pregunta2.php?error=2");
-    }
+    header("location: ./pregunta2.php?error=2");
+}
 ?>
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,16 @@
 </head>
 <body class="fondo3">
     <div class="container2">
-        <h1>Cual es el ultimo pokemon de la pokedex de la primera Generacion?
+        <h1>Cual es el ultimo pokemon de la pokedex de la primera Generacion? <br>
+        <?php
+    if(isset($_GET['error']) &&  $_GET['error'] == 1){
+        echo "Error, la pista es: El ultimo pokemon empieza por M y es pequeño";
+}
+    if(isset($_GET['error']) &&  $_GET['error'] == 2){
+        header("location: ./pregunta1.php");
+        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
+}
+?>
             <div class="fila1_b"> 
                 <img class="pokeball" src="../img/pokeball.png">
                 <img class="pokeball" src="../img/pokeball.png">
@@ -24,16 +33,16 @@
         </div>
         <div class="contenedor-b">
             <div class="img2-b">
-                <img src="../img/mew.png" alt="btn" width="200">
+                <img src="../img/mew.png" width="200">
             </div>
             <div class="img2-b">
-                <img src="../img/arceus.png" alt="btn1" width="200">
+                <img src="../img/arceus.png" width="200">
             </div>
             <div class="img2-b">
-                <img src="../img/mewtwo.png" alt="btn2" width="200">
+                <img src="../img/mewtwo.png" width="200">
             </div>
             <div class="img2-b">
-                <img src="../img/pikachu_e.png" alt="btn3" width="200">
+                <img src="../img/pikachu_e.png" width="200">
             </div>
         </div>
     </div>
@@ -48,11 +57,3 @@
     </div>
 </body>
 </html>
-<?php
-    if(isset($_GET['error']) &&  $_GET['error'] == 1){
-        echo "";
-    }
-    if(isset($_GET['error']) &&  $_GET['error'] == 2){
-        echo "No te intentes colar payaso, ahora por gracioso te vuelves al inicio, besis de fresi :v";
-    }
-?>
